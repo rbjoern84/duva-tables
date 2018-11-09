@@ -1,0 +1,25 @@
+@media print {
+
+  .header {
+    display: none;
+  }
+
+  .main {
+    background-color: white;
+    padding: 0;
+  }
+
+  .data-table {
+    box-shadow: none;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .data-table table,
+  .data-table td,
+  .data-table th {
+    border-color: #333;
+  }
+
+}
+

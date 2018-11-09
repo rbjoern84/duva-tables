@@ -1,0 +1,83 @@
+.data-table {
+  background-color: #FFF;
+  padding: .75rem;
+  box-shadow: 0 3px 10px rgba(0,0,0,.25);
+  overflow: auto;
+}
+
+.data-table table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0.2em;
+  border: 1px solid #CCC;
+  font-size: .85rem;
+}
+
+.data-table caption {
+  font-weight: bold;
+  font-size: 1.25rem;
+  margin-top: 1em;
+  margin-bottom: 1.55em;
+}
+
+.data-table thead {
+  border-bottom: 1px solid #CCC;
+}
+
+.data-table th,
+.data-table td {
+  border: 1px solid #CCC;
+}
+
+.data-table th {
+  padding: .75em .75em;
+}
+
+.data-table tbody th {
+  text-align: left;
+}
+
+.data-table td {
+  text-align: right;
+  padding: .5em .75em;
+}
+
+.data-table tbody + tbody {
+  border-top: 5px solid #CCC;
+}
+
+.data-table table tbody tr:hover {
+  background-color: #FFF9D9;
+}
+
+.data-table tbody tr:nth-child(even) {
+  background-color: #F3F3F3;
+}
+
+.data-table small {
+  font-weight: normal;
+  display: block;
+  margin-top: .25em;
+}
+
+.data-table .footnote {
+  font-size: .75rem;
+  opacity: .3;
+  margin: 1em 0 0 0;
+  text-align: right;
+  max-width: none;
+}
+
+.data-table .caption {
+  font-weight: bold;
+  font-size: 1rem;
+  background-color: #FFF;
+}
+
+.data-table table tr.summary {
+  font-weight: bold;
+  background-color: #D4F7FA;
+}
+
+.data-table .text--left { text-align: left; }
+.data-table .text--primary { color: #258c93; }
