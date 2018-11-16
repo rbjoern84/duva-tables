@@ -1,3 +1,7 @@
+@import "fonts.css";
 @import "general.css";
+@import "button.css";
+@import "header.css";
+@import "filters.css";
 @import "data_tables.css";
 @import "print.css";

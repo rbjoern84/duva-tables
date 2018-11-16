@@ -1,0 +1,111 @@
+.filter-dropdown {
+  margin-bottom: 1rem;
+}
+
+.filter {
+  background-color: #FFF;
+  padding-bottom: 0;
+  margin-bottom: 5px;
+  transition: padding .2s;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+
+.filter ul {
+  padding: 0 1.25rem;
+  margin: 0;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height .2s, opacity .3s;
+  opacity: 0;
+}
+
+.filter.open {
+  padding-bottom: 1.25rem;
+}
+
+.filter.open ul {
+  max-height: 50rem;
+  opacity: 1;
+}
+
+.filter .dropdown-trigger {
+  padding: .75rem 1.25rem .75rem;
+  margin: 0;
+  max-width: none;
+  position: relative;
+  cursor: pointer;
+  font-size: 0.9375rem;
+  transition: color .3s;
+}
+
+.filter .dropdown-trigger:hover {
+  color: #0093A3;
+}
+
+.filter .dropdown-trigger:after {
+  content: "";
+  display: block;
+  width: 1.5em;
+  height: 1.5em;
+  background-image: url("../images/icons/angle-down.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: .75rem;
+  right: 1rem;
+  transition: transform .2s;
+}
+
+.filter.open .dropdown-trigger:after {
+  transform: scaleY(-1);
+}
+
+.filter li {
+  list-style: none;
+  border-radius: 3px;
+  background: linear-gradient(to right, #EEE, #FFF);
+  padding: .25em .6em;
+  margin-bottom: .25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: .8125rem;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.filter li:hover {
+  background: #FFF9D9;
+}
+
+.filter li.active {
+  background: #258c93;
+  background: linear-gradient(to right, #FFF099, #FFF);
+  font-weight: 500;
+}
+
+#filterForm .actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.table-caption,
+#filteredBy {
+  margin-left: -12px;
+}
+
+.table-caption + #filteredBy {
+  margin-top: -1rem;
+  margin-bottom: 3rem;
+  font-size: .75rem;
+  font-weight: 500;
+}
+
+#filteredBy span {
+  font-weight: 400;
+}
+
+#filteredBy span:not(:last-child):after {
+  content: " / ";
+}

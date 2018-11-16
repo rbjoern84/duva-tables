@@ -1,6 +1,8 @@
 @media print {
 
-  .header {
+  .header,
+  .filter-container,
+  .table-footer button {
     display: none;
   }
 
@@ -16,9 +18,10 @@
   }
 
   .data-table table,
+  .data-table tbody,
   .data-table td,
   .data-table th {
-    border-color: #333;
+    border-color: #ccc !important;
   }
 
 }

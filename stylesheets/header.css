@@ -1,0 +1,18 @@
+.header {
+  padding-top: 0;
+}
+
+.header .logo {
+  display: block;
+  position: absolute;
+  max-width: 7rem;
+  top: .5rem;
+}
+
+.header .title {
+  font-weight: 400;
+  text-align: center;
+  color: #0093A3;
+  margin: .75em auto;
+  width: calc(100% - 16rem);
+}

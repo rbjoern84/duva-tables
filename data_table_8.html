@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2-Kopf nebeneinander - DUVA-ASW Daten-Tabellen</title>
+    <title>2-Kopfspalten - DUVA-ASW Daten-Tabellen</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/application.css">
     <script src="./javascript/vendor/jquery.js" type="text/javascript"></script>
     <script src="./javascript/application.js" type="text/javascript"></script>
@@ -20,7 +20,7 @@
       <section class="container">
         <br />
         <h1>
-          Anzahl Haushalte nach Kleinräumige Gliederung 3-stellig (Gemeindeteil), Alter der Bezugsperson, Staatsangehörigkeiten im Haushalt, Geschlecht der Bezugsperson
+          Anzahl Haushalte nach Kleinräumige Gliederung 3-stellig (Gemeindeteil), Staatsangehörigkeiten im Haushalt, Geschlecht der Bezugsperson
         </h1>
         <h4>Tabelle aus der Datei:</h4>
         <p class="text--small">
@@ -31,26 +31,43 @@
         <div class="data-table">
           <table>
             <thead>
-              <tr>
-                <th colspan="2" rowspan="2"></th>
-                <th colspan="3" class="caption">Staatsangehörigkeiten im Haushalt</th>
-                <th colspan="3" class="caption">Geschlecht der Bezugsperson</th>
+              <tr class="caption">
+                <th>Staatsangehörigkeiten im Haushalt</th>
+                <th colspan="3" width="20%">deutscher Haushalt</th>
+                <th colspan="3" width="20%">gemischter Haushalt<br /><small>(mit deutschen und nichtdeutschen Haushaltsmitgliedern)</small></th>
+                <th colspan="3" width="20%">ausländischer Haushalt</th>
+                <th colspan="3" width="20%">Gesamt</th>
               </tr>
               <tr>
-                <th width="12%">deutscher Haushalt</th>
-                <th width="12%">gemischter Haushalt<br /><small>mit deutschen und nichtheutschen Haushaltsmitgliedern</small></th>
-                <th width="12%">ausländischer Haushalt</th>
-                <th width="12%">männlich</th>
-                <th width="12%">weiblich</th>
-                <th width="12%">Gesamt</th>
+               <th rowspan="2">Kleinräumige Gliederung 3-stellig <small>(Gemeindeteil)</small></th>
+               <th colspan="12">Geschlecht der Bezugsperson</th>
+              </tr>
+              <tr>
+                <th>männlich</th>
+                <th>weiblich</th>
+                <th>Summe</th>
+                <th>männlich</th>
+                <th>weiblich</th>
+                <th>Summe</th>
+                <th>männlich</th>
+                <th>weiblich</th>
+                <th>Summe</th>
+                <th>männlich</th>
+                <th>weiblich</th>
+                <th>Summe</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <th rowspan="13" class="caption">Kleinräumige Gliederung 3-stellig<br /><small>(Gemeindeteil)</small></th>
                 <th>Altstadt-Mitte</th>
+                <td>1295</td>
+                <td>1085</td>
                 <td>2380</td>
+                <td>112</td>
+                <td>10</td>
                 <td>122</td>
+                <td>241</td>
+                <td>152</td>
                 <td>393</td>
                 <td>1648</td>
                 <td>1247</td>
@@ -58,8 +75,14 @@
               </tr>
               <tr>
                 <th>Altstadt-Ring</th>
+                <td>1153</td>
+                <td>890</td>
                 <td>2043</td>
+                <td>112</td>
+                <td>15</td>
                 <td>127</td>
+                <td>194</td>
+                <td>113</td>
                 <td>307</td>
                 <td>1459</td>
                 <td>1018</td>
@@ -67,8 +90,14 @@
               </tr>
               <tr>
                 <th>Brühl-Güterbahnhof</th>
+                <td>1813</td>
+                <td>1381</td>
                 <td>3194</td>
+                <td>222</td>
+                <td>14</td>
                 <td>236</td>
+                <td>258</td>
+                <td>148</td>
                 <td>406</td>
                 <td>2293</td>
                 <td>1543</td>
@@ -76,8 +105,14 @@
               </tr>
               <tr>
                 <th>Brühl-Industriegebiet</th>
+                <td>168</td>
+                <td>60</td>
                 <td>228</td>
                 <td>22</td>
+                <td>–</td>
+                <td>22</td>
+                <td>147</td>
+                <td>21</td>
                 <td>168</td>
                 <td>337</td>
                 <td>81</td>
@@ -85,8 +120,14 @@
               </tr>
               <tr>
                 <th>Ebnet</th>
+                <td>765</td>
+                <td>437</td>
                 <td>1202</td>
+                <td>50</td>
+                <td>1</td>
                 <td>51</td>
+                <td>39</td>
+                <td>29</td>
                 <td>68</td>
                 <td>854</td>
                 <td>467</td>
@@ -94,8 +135,14 @@
               </tr>
               <tr>
                 <th>Günterstal</th>
+                <td>494</td>
+                <td>288</td>
                 <td>782</td>
+                <td>50</td>
+                <td>4</td>
                 <td>54</td>
+                <td>32</td>
+                <td>38</td>
                 <td>70</td>
                 <td>576</td>
                 <td>330</td>
@@ -103,8 +150,14 @@
               </tr>
               <tr>
                 <th>Alt-Stühlinger</th>
+                <td>2536</td>
+                <td>1860</td>
                 <td>4396</td>
+                <td>342</td>
+                <td>18</td>
                 <td>360</td>
+                <td>542</td>
+                <td>280</td>
                 <td>822</td>
                 <td>3420</td>
                 <td>2158</td>
@@ -112,8 +165,14 @@
               </tr>
               <tr>
                 <th>Betzenh.-Bischofslinde</th>
+                <td>2119</td>
+                <td>1466</td>
                 <td>3585</td>
+                <td>405</td>
+                <td>14</td>
                 <td>419</td>
+                <td>462</td>
+                <td>219</td>
                 <td>681</td>
                 <td>2986</td>
                 <td>1699</td>
@@ -121,8 +180,14 @@
               </tr>
               <tr>
                 <th>Alt-Betzenhausen</th>
+                <td>1631</td>
+                <td>1017</td>
                 <td>2648</td>
+                <td>131</td>
+                <td>9</td>
                 <td>140</td>
+                <td>199</td>
+                <td>130</td>
                 <td>329</td>
                 <td>1961</td>
                 <td>1156</td>
@@ -130,8 +195,14 @@
               </tr>
               <tr>
                 <th>Haslach-Egerten</th>
+                <td>1815</td>
+                <td>1508</td>
                 <td>3323</td>
+                <td>192</td>
+                <td>12</td>
                 <td>204</td>
+                <td>319</td>
+                <td>202</td>
                 <td>521</td>
                 <td>2326</td>
                 <td>1722</td>
@@ -139,8 +210,14 @@
               </tr>
               <tr>
                 <th>Haslach-Gartenstadt</th>
+                <td>1986</td>
+                <td>1249</td>
                 <td>3235</td>
+                <td>280</td>
+                <td>9</td>
                 <td>289</td>
+                <td>455</td>
+                <td>187</td>
                 <td>642</td>
                 <td>2721</td>
                 <td>1445</td>
@@ -148,8 +225,14 @@
               </tr>
               <tr>
                 <th>Haslach-Schildacker</th>
+                <td>204</td>
+                <td>146</td>
                 <td>350</td>
                 <td>27</td>
+                <td>–</td>
+                <td>27</td>
+                <td>48</td>
+                <td>24</td>
                 <td>72</td>
                 <td>279</td>
                 <td>170</td>
@@ -157,65 +240,29 @@
               </tr>
               <tr>
                 <th>Haslach-Haid</th>
+                <td>1061</td>
+                <td>475</td>
                 <td>1536</td>
+                <td>104</td>
+                <td>9</td>
                 <td>113</td>
+                <td>126</td>
+                <td>54</td>
                 <td>180</td>
                 <td>1291</td>
                 <td>538</td>
                 <td>1829</td>
               </tr>
-            </tbody>
-            <tbody>
-              <tr>
-                <th rowspan="6" class="caption">Alter der Bezugsperson</th>
-                <th>0 bis unter 30 Jahre</th>
-                <td>8025</td>
-                <td>580</td>
-                <td>1578</td>
-                <td>5657</td>
-                <td>4526</td>
-                <td>10183</td>
-              </tr>
-              <tr>
-                <th>30 bis unter 45 Jahre</th>
-                <td>6197</td>
-                <td>828</td>
-                <td>1661</td>
-                <td>6133</td>
-                <td>2553</td>
-                <td>8686</td>
-              </tr>
-              <tr>
-                <th>45 bis unter 60 Jahre</th>
-                <td>6456</td>
-                <td>477</td>
-                <td>815</td>
-                <td>5299</td>
-                <td>2449</td>
-                <td>7748</td>
-              </tr>
-              <tr>
-                <th>60 bis unter 75 Jahre</th>
-                <td>4602</td>
-                <td>232</td>
-                <td>478</td>
-                <td>3413</td>
-                <td>1899</td>
-                <td>5312</td>
-              </tr>
-              <tr>
-                <th>75 Jahre oder älter</th>
-                <td>3622</td>
-                <td>47</td>
-                <td>127</td>
-                <td>1649</td>
-                <td>2147</td>
-                <td>3796</td>
-              </tr>
               <tr class="summary">
                 <th>Gesamt</th>
+                <td>17040</td>
+                <td>11862</td>
                 <td>28902</td>
+                <td>2049</td>
+                <td>115</td>
                 <td>2164</td>
+                <td>3062</td>
+                <td>1597</td>
                 <td>4659</td>
                 <td>22151</td>
                 <td>13574</td>

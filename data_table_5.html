@@ -6,16 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>2 Werte nebeneinander - DUVA-ASW Daten-Tabellen</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/application.css">
+    <script src="./javascript/vendor/jquery.js" type="text/javascript"></script>
+    <script src="./javascript/application.js" type="text/javascript"></script>
   </head>
   <body>
-    <header class="header text--center">
-      <br />
-      (Header)
-      <br />
-      <br />
+    <header class="header container text--center">
+      <a href="/" class="logo">
+        <img src="./images/DUVA_logo.svg" />
+      </a>
+      <h3 class="title">Auswertungsasistent</h3>
     </header>
     <main class="main">
       <section class="container">
+        <br />
         <h1>
           Anzahl Haushalte, Anzahl der Personen (Wohnberechtigte) im Haushalt nach Kleinräumige Gliederung 3-stellig (Gemeindeteil), Alter der Bezugsperson, Staatsangehörigkeiten im Haushalt, Geschlecht der Bezugsperson
         </h1>
@@ -24,7 +27,7 @@
           Haushalte, Personen und Kinder nach KGL, Haushaltstypen, Haushaltsgröße, Kinderzahl, Merkmale der Bezugsperson 31.12.2011 • Freiburg, Statistische Bezirke • 31.12.2011 - 31.12.2011 • Einwohnermelderegister
         </p>
       </section>
-      <section class="container">
+      <section class="table-container container">
         <div class="data-table">
           <table>
             <thead>
@@ -348,6 +351,12 @@
               </tr>
             </tbody>
           </table>
-          <p class="footnote">Generiert am 31.10.2018 um 20:38:53 Uhr / DUVA Auswertungsassistent V4.8 Rel 14</p>
         </div>
       </section>
+      <section class="table-footer container">
+        <p class="footnote">Generiert am 31.10.2018 um 20:47:22 Uhr / DUVA Auswertungsassistent V4.8 Rel 14</p>
+        <button class="btn" onclick="window.print()">Drucken</button>
+      </section>
+    </main>
+  </body>
+</html>

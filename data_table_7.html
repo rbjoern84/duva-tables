@@ -4,17 +4,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Einfache Tabelle - DUVA-ASW Daten-Tabellen</title>
+    <title>Filter - DUVA-ASW Daten-Tabellen</title>
     <link rel="stylesheet" type="text/css" href="./stylesheets/application.css">
     <script src="./javascript/vendor/jquery.js" type="text/javascript"></script>
     <script src="./javascript/application.js" type="text/javascript"></script>
   </head>
   <body>
-    <header class="header text--center">
-      <br />
-      (Header)
-      <br />
-      <br />
+    <header class="header container text--center">
+      <a href="/" class="logo">
+        <img src="./images/DUVA_logo.svg" />
+      </a>
+      <h3 class="title">Auswertungsasistent</h3>
     </header>
     <main class="main">
       <section class="container">
@@ -27,19 +27,58 @@
           Haushalte, Personen und Kinder nach KGL, Haushaltstypen, Haushaltsgröße, Kinderzahl, Merkmale der Bezugsperson 31.12.2011 • Freiburg, Statistische Bezirke • 31.12.2011 - 31.12.2011 • Einwohnermelderegister
         </p>
       </section>
+      <section class="filter-container container">
+        <h3>Filter</h3>
+        <form id="filterForm">
+          <div class="filter-dropdown">
+            <div class="filter" id="F_01_009">
+              <h4 title="Alter der Bezugsperson" class="dropdown-trigger">Alter der Bezugsperson</h4>
+              <ul>
+                <li>0 bis unter 30 Jahre</li>
+                <li>30 bis unter 45 Jahre</li>
+                <li>45 bis unter 60 Jahre</li>
+                <li>60 bis unter 75 Jahre</li>
+                <li>75 Jahre oder älter</li>
+              </ul>
+            </div>
+            <div class="filter" id="F_01_006">
+              <h4 title="Haushaltstyp (HHSTAT)_neu" class="dropdown-trigger">Haushaltstyp (HHSTAT)_neu</h4>
+              <ul>
+                <li>Bezugsperson ohne ehelichen oder nichtehelichen Partner, mindestens ein Kind, keine weitere Person</li>
+                <li>Bezugsperson ohne ehelichen oder nichtehelichen Partner, mindestens ein Kind, mindestens eine weitere Person</li>
+                <li>Ehepaar mindestens ein Kind keine weitere Person</li>
+                <li>Ehepaar, kein Kind, keine weitere Person</li>
+                <li>Ehepaar, kein Kind, mindestens eine weitere Person</li>
+                <li>Ehepaar, mindestens ein Kind, mindestens eine weitere Person</li>
+                <li>Einpersonenhaushalt</li>
+                <li>Merkmalsableitung nicht durchgeführt</li>
+                <li>Paar in nichtehelicher Lebensgemeinschaft, kein Kind, keine weitere Person</li>
+                <li>Paar in nichtehelicher Lebensgemeinschaft, kein Kind, mindestens eine weitere Person</li>
+                <li>Paar in nichtehelicher Lebensgemeinschaft, mindestens ein Kind, keine weitere Person</li>
+                <li>Paar in nichtehelicher Lebensgemeinschaft, mindestens ein Kind, mindestens eine weitere Person</li>
+                <li>Person gehört nicht zur Bevölkerung in Haushalten</li>
+                <li>Sonstiger Mehrpersonenhaushalt ohne Kind(er)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="actions">
+            <button id="resetFilter" class="btn btn--secondary" title="Filter zurücksetzen">Filter Zurücksetzen</button>
+            <button class="btn" title="Abfrage aktualisieren"><span class="icon icon--refresh"><img src="./images/icons/sync--white.svg" /></span>Aktualisieren</button>
+          </div>
+        </form>
+      </section>
       <section class="table-container container">
         <div class="data-table">
+          <h3 class="table-caption">Staatsangehörigkeiten im Haushalt</h3>
+          <p id="filteredBy"></p>
           <table>
             <thead>
               <tr>
-                <th width="20%" class="caption">Staatsangehörigkeiten im Haushalt</th>
-                <th width="20%" rowspan="2" class="caption">deutscher Haushalt</th>
-                <th width="20%" rowspan="2" class="caption">gemischter Haushalt<br /><small>(mit deutschen und nichtdeutschen Haushaltsmitgliedern)</small></th>
-                <th width="20%" rowspan="2" class="caption">ausländischer Haushalt</th>
-                <th width="20%" rowspan="2" class="caption">Gesamt</th>
-              </tr>
-              <tr>
-                <th class="caption">Kleinräumige Gliederung 3-stellig<br /><small>(Gemeindeteil)</small></th>
+                <th width="20%" class="caption">Kleinräumige Gliederung 3-stellig (Gemeindeteil)</th>
+                <th width="20%" class="caption">deutscher Haushalt</th>
+                <th width="20%" class="caption">gemischter Haushalt<br /><small>(mit deutschen und nichtdeutschen Haushaltsmitgliedern)</small></th>
+                <th width="20%" class="caption">ausländischer Haushalt</th>
+                <th width="20%" class="caption">Gesamt</th>
               </tr>
             </thead>
             <tbody>
